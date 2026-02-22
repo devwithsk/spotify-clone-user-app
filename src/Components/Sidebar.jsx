@@ -6,6 +6,8 @@ import { FaPlus } from "react-icons/fa6";
 import { RiExpandDiagonalFill } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { FaListUl } from "react-icons/fa";
+import { FiMusic } from "react-icons/fi";
+import { LuDot } from "react-icons/lu";
 
 
 
@@ -62,6 +64,22 @@ const Sidebar = () => {
               <p className='text-(--var-gray3) font-bold text-[1rem] mr-3'>Recents</p>
               <FaListUl className='text-(--var-gray3)'/>
             </div>
+          </div>
+
+          <div className='w-[95%] h-16 ml-[2.5%] flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
+              <div className='w-[20%] h-[85%] ml-[2.5%] rounded bg-(--var-gray4) flex justify-center items-center'>
+                <FiMusic className='text-(--var-light) text-3xl' />
+              </div>
+
+              <div className='flex flex-col ml-3 text-(--var-light)'>
+                <h3 className='font-bold'>My Playlist #1</h3>
+                <span className='flex text-(--var-gray3) text-[0.9rem]'>
+                  <p>Playlist</p>
+                  <LuDot className='transform -translate-y-0.5 text-bold text-2xl'/>
+                  <p>Sonu</p> 
+                </span>
+                
+              </div>
           </div>
               
         </div>

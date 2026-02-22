@@ -12,7 +12,7 @@ const App = () => {
         <Sidebar className='justify-center items-center' />
       </div>
 
-      <div className='h-15 w-full bg-(--var-dark) text-(--var-light) flex items-center justify-center'>
+      <div className='h-20 w-full bg-(--var-dark) text-(--var-light) flex items-center justify-center'>
         Music Control Bar (Play/Pause, Timeline, etc. yahan aayega)
       </div>
       
