@@ -7,6 +7,15 @@
     font-family: 'Montserrat', sans-serif
 }
 
+:root{
+    --var-light:#FFFFFF;
+    --var-dark:#000000;
+    --var-gray:#1F1F1F;
+    --var-gray2:#191919;
+    --var-gray3:#b3b3b3;
+    --var-gray4:rgba(255, 255, 255, 0.3)
+}
+
 /* body{
     background-color: #121214;
 } */
