@@ -42,6 +42,31 @@ import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
 
+
+export const playlists = [
+    {
+        id:1,
+        name:"Playlist"
+    },
+    {
+        id:2,
+        name:"Playlist"
+    },
+    {
+        id:3,
+        name:"Playlist"
+    },
+    {
+        id:4,
+        name:"Playlist"
+    },
+    {
+        id:5,
+        name:"Playlist"
+    }
+
+]
+
 export const assets = {
     bell_icon,
     home_icon,
