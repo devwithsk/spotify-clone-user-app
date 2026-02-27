@@ -7,6 +7,10 @@
     font-family: 'Montserrat', sans-serif
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 html{
     font-family: "Montserrat", sans-serif;
 }
@@ -19,6 +23,11 @@ html{
     --var-gray3:#b3b3b3;
     --var-gray4:rgba(255, 255, 255, 0.3);
     --var-gray5:rgba(255, 255, 255, 0.1);
+}
+
+
+.rounded-tabs{
+    border-radius: 1rem 1rem 0 0;
 }
 
 /* body{

@@ -43,7 +43,7 @@ import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
 
 
-export const playlists = [
+export const PlaylistItems = [
     {
         id:1,
         name:"Playlist"

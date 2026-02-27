@@ -9,7 +9,7 @@ import { FaListUl } from "react-icons/fa";
 import { FiMusic } from "react-icons/fi";
 import { LuDot } from "react-icons/lu";
 import { AuthContext } from '../Context/AuthContext';
-import Playlists from './Playlists';
+import {Playlists} from './Playlists';
 
 
 
@@ -25,7 +25,7 @@ const Sidebar = () => {
 
 
   return (
-    <aside className='w-[23%] h-full hidden md:flex lg:flex flex-col justify-center items-center'>
+    <aside className='w-[23%] h-full hidden md:flex lg:flex flex-col justify-center items-center bg-(--var-dark)'>
         <div className='w-[95%] h-[98%] bg-(--var-gray2) rounded-2xl flex flex-col'>
 
           <div className='w-full flex justify-between items-center p-5'>

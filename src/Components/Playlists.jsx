@@ -4,11 +4,11 @@ import { FaListUl } from "react-icons/fa";
 import { FiMusic } from "react-icons/fi";
 import { LuDot } from "react-icons/lu";
 import { AuthContext } from '../Context/AuthContext';
-import PlaylistItems from '../assets/assets';
+import {PlaylistItems} from '../assets/assets';
 
 
 
-const Playlists = () => {
+export const Playlists = () => {
   return (
     <>
         <div className='ml-5 w-20 h-8 bg-(--var-gray4) rounded-2xl flex justify-center items-center hover:bg-slate-700 duration-150 transition-all'>
@@ -28,58 +28,45 @@ const Playlists = () => {
 
           {/* plalist items start here */}
 
+          <div className='w-full h-full mb-2 overflow-y-scroll'>
+
+          {
+
+              PlaylistItems.map((item, index) => {
+                
+                 return (
+                  <div className='w-[95%] h-16 ml-[2.5%] mt-2 flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
+                  <div className='w-[20%] h-[85%] ml-[2.5%] rounded bg-(--var-gray4) flex justify-center items-center'>
+                    <FiMusic className='text-(--var-light) text-3xl' />
+                  </div>
+
+                  <div className='flex flex-col ml-3 text-(--var-light)'>
+                    <h3 className='font-bold'>{item.name} #{item.id}</h3>
+                    <span className='flex text-(--var-gray3) text-[0.8rem]'>
+                      <p>Playlist</p>
+                      <LuDot className='transform -translate-y-0.5 text-bold text-2xl -ml-1'/>
+                      <p className='-ml-1'>Sonu</p> 
+                    </span>
+                    
+                  </div>
+              </div>
+                 )
+
+
+              })
+
+
+          }
+          </div>
+
         
 
 
-          <div className='w-[95%] h-16 ml-[2.5%] mt-2 flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
-              <div className='w-[20%] h-[85%] ml-[2.5%] rounded bg-(--var-gray4) flex justify-center items-center'>
-                <FiMusic className='text-(--var-light) text-3xl' />
-              </div>
+         
 
-              <div className='flex flex-col ml-3 text-(--var-light)'>
-                <h3 className='font-bold'>My Playlist #1</h3>
-                <span className='flex text-(--var-gray3) text-[0.9rem]'>
-                  <p>Playlist</p>
-                  <LuDot className='transform -translate-y-0.5 text-bold text-2xl'/>
-                  <p>Sonu</p> 
-                </span>
-                
-              </div>
-          </div>
+          
 
-          <div className='w-[95%] h-16 ml-[2.5%] mt-2 flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
-              <div className='w-[20%] h-[85%] ml-[2.5%] rounded bg-(--var-gray4) flex justify-center items-center'>
-                <FiMusic className='text-(--var-light) text-3xl' />
-              </div>
-
-              <div className='flex flex-col ml-3 text-(--var-light)'>
-                <h3 className='font-bold'>My Playlist #1</h3>
-                <span className='flex text-(--var-gray3) text-[0.9rem]'>
-                  <p>Playlist</p>
-                  <LuDot className='transform -translate-y-0.5 text-bold text-2xl'/>
-                  <p>Sonu</p> 
-                </span>
-                
-              </div>
-          </div>
-
-          <div className='w-[95%] h-16 ml-[2.5%] mt-2 flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
-              <div className='w-[20%] h-[85%] ml-[2.5%] rounded bg-(--var-gray4) flex justify-center items-center'>
-                <FiMusic className='text-(--var-light) text-3xl' />
-              </div>
-
-              <div className='flex flex-col ml-3 text-(--var-light)'>
-                <h3 className='font-bold'>My Playlist #1</h3>
-                <span className='flex text-(--var-gray3) text-[0.9rem]'>
-                  <p>Playlist</p>
-                  <LuDot className='transform -translate-y-0.5 text-bold text-2xl'/>
-                  <p>Sonu</p> 
-                </span>
-                
-              </div>
-          </div>
+          
     </>
   )
 }
-
-export default Playlists
