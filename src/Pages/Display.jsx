@@ -11,15 +11,32 @@ const Display = () => {
     <div className='w-full h-full flex flex-col'>
         <div className='w-full h-80'>
             <h2 className='px-8 font-bold text-(--var-light) text-xl'>Trending Songs</h2>
-            <div className='w-full h-[90%] mt-3 ml-5'>
-                <div className='w-50 h-full bg-amber-300 flex flex-col justify-center items-center'>
-                    <div className='w-[85%] h-[60%]'>
-                        <img className='rounded-lg shadow-2xl' src={image} alt="" />
-                    </div>
-                    <div className='w-[85%] h-[30%] bg-green-300'>
-                        <h3>{name}</h3>
-                    </div>
-                </div>
+            <div className='w-full mt-4 flex gap-6 overflow-x-auto pb-4 no-scrollbar bg-red-200'>
+
+                {/* Songs load here */}
+
+                {
+                    songsData.map((song, index) => {
+                        return (
+                            <div 
+                             key={index}
+                             className='w-50 h-full flex flex-col justify-center items-center cursor-pointer rounded hover:scale-[1.01] hover:bg-(--var-gray5) transition-all duration-300'>
+                                <div className='w-[85%] h-[60%]'>
+                                    <img className='rounded-lg shadow-2xl' src={song.image} alt="" />
+                                </div>
+                                <div className='w-[85%] h-[30%]'>
+                                    <h3 className='font-bold text-(--var-light) hover:underline'>{song.name}</h3>
+                                    <p className='text-(--var-light) text-md hover:underline'>{song.desc.slice(0, 30)}...</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+
+                
+
+                
+
             </div>
         </div>
     </div>
