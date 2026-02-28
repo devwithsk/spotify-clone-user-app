@@ -48,7 +48,7 @@ const Sidebar = () => {
 
               
               
-              <p className='text-[1rem] font-bold text-(--var-light)'>Your Library</p>
+              <p className='text-xl font-bold text-(--var-light)'>Your Library</p>
             </div>
 
             <div className='flex justify-center items-center'>
@@ -71,11 +71,11 @@ const Sidebar = () => {
           {
             isLogin ? (<Playlists />) : (
 
-              <div className='w-full h-35 mt-5 flex justify-center'>
-               <div className='w-75 h-full bg-(--var-gray5) rounded-xl flex flex-col text-white'>
-                  <h3 className='text-[0.9rem] font-bold ml-3 mt-4'>Create your first playlist</h3>
-                  <p className='text-[0.8rem] font-900 ml-3 mt-2'>It's easy, we'll help you</p>
-                  <button className='flex justify-center items-center w-33 h-8 ml-3 mt-5 text-center text-[0.8rem] bg-white text-black font-bold rounded-2xl cursor-pointer hover:scale-105 duration-300 transition-all'>Create Playlist</button>
+              <div className='w-full h-40 mt-5 flex justify-center'>
+               <div className='w-85 h-full bg-(--var-gray5) rounded-xl flex flex-col text-white'>
+                  <h3 className='text-lg font-bold ml-5 mt-4'>Create your first playlist</h3>
+                  <p className='text-md font-semibold font-900 ml-5 mt-2'>It's easy, we'll help you</p>
+                  <button className='flex justify-center items-center w-38 h-10 ml-3 mt-6 text-center text-md bg-white text-black font-bold rounded-4xl cursor-pointer hover:scale-105 duration-300 transition-all'>Create Playlist</button>
                </div>
               </div>
 

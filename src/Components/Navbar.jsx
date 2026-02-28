@@ -10,19 +10,19 @@ import User from './User';
 
 const Navbar = () => {
   return (
-    <div className='w-full bg-(--var-dark) h-15 flex justify-between'>
+    <div className='w-full bg-(--var-dark) h-16 flex justify-between'>
 
         {/* logo */}
         <div className='flex justify-center items-center'>
           <Logo />
-          <h1 className='hidden md:block lg:block text-(--var-light) ml-2 text-2xl'>Spotify</h1>
+          <h1 className='hidden md:block lg:block text-(--var-light) ml-2 text-2xl font-bold'>Spotify</h1>
         </div>
         
       
         <div className='flex justify-center items-center'>
 
             {/* Home button */}
-            <div className='w-10 h-10 rounded-full hidden lg:flex justify-center items-center bg-(--var-gray) cursor-pointer hover:scale-[1.05] duration-300 transition-all'>
+            <div className='w-13 h-13 rounded-full hidden lg:flex justify-center items-center bg-(--var-gray) cursor-pointer hover:scale-[1.05] duration-300 transition-all'>
                 <GoHomeFill className='text-(--var-light) text-2xl'/>
             </div>
 
