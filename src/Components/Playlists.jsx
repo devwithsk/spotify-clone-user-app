@@ -35,7 +35,8 @@ export const Playlists = () => {
               PlaylistItems.map((item, index) => {
                 
                  return (
-                  <div className='w-[95%] h-16 ml-[2.5%] mt-2 flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
+                  <div key={index} 
+                  className='w-[95%] h-16 ml-[2.5%] mt-2 flex items-center hover:bg-(--var-gray4) duration-300 transition-all rounded cursor-pointer'>
                   <div className='w-[20%] h-[85%] ml-[2.5%] rounded bg-(--var-gray4) flex justify-center items-center'>
                     <FiMusic className='text-(--var-light) text-3xl' />
                   </div>
