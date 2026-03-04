@@ -1,6 +1,8 @@
 import {React, useRef, useState} from 'react'
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
+import { FaPlay } from "react-icons/fa";
+
 
 const Slides = ({title, data}) => {
 
@@ -65,7 +67,7 @@ const Slides = ({title, data}) => {
                             return (
                                 <div 
                                  key={index}
-                                 className='min-w-50 w-50 h-full flex flex-col py-4 justify-center items-center cursor-pointer rounded hover:scale-[1.01] hover:bg-(--var-gray5) transition-all duration-300'>
+                                 className='relative min-w-50 w-50 h-full flex flex-col py-4 justify-center items-center cursor-pointer rounded hover:scale-[1.01] hover:bg-(--var-gray5) transition-all duration-300 group/card'>
                                     <div className='w-[80%] h-[60%]'>
                                         <img className='rounded-lg shadow-2xl' src={song.image} alt="" />
                                     </div>
@@ -73,6 +75,12 @@ const Slides = ({title, data}) => {
                                         <h3 className='font-bold text-(--var-light) hover:underline'>{song.name}</h3>
                                         <p className='text-(--var-light) text-md hover:underline'>{song.desc.slice(0, 30)}...</p>
                                     </div>
+
+                                    <div className='abosulte w-12 h-12 -translate-y-32 translate-x-12 flex justify-center items-center bg-green-500 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:-translate-y-35 transition-all duration-300 ease-in-out
+                      hover:scale-105 active:scale-95'>
+                                        <FaPlay />
+                                    </div>
+
                                 </div>
                             )
                         })
