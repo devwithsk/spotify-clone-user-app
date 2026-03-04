@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
 import Display from './Pages/Display'
+import Controlbar from './Components/Controlbar'
 
 
 const App = () => {
@@ -15,9 +16,7 @@ const App = () => {
         <Display className='justify-center items-center' />
       </div>
 
-      <div className='h-20 w-full bg-(--var-dark) text-(--var-light) flex items-center justify-center'>
-        Music Control Bar (Play/Pause, Timeline, etc. yahan aayega)
-      </div>
+      <Controlbar />
       
     </div>
 
