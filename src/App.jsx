@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
 import Display from './Pages/Display'
 import Controlbar from './Components/Controlbar'
+import { SongContext } from './Context/SongContext'
 
 
 const App = () => {
+
+  const {songRef, track} = useContext(SongContext)
+
   return (
     
     <div className='w-full h-screen flex flex-col'>
@@ -17,6 +21,7 @@ const App = () => {
       </div>
 
       <Controlbar />
+      <audio ref={songRef} src={track.file} preload='auto'></audio>
       
     </div>
 

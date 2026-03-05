@@ -12,11 +12,11 @@ const Home = () => {
 
 
         {/* Trending songs start here */}
-        <Slides title="Trending Songs" data={songsData} />
+        <Slides title="Trending Songs" data={songsData} type="songs"/>
 
 
         {/* Top featured charts start here */}
-        <Slides title="Featured Charts" data={albumsData}/>
+        <Slides title="Featured Charts" data={albumsData} type="albums"/>
 
     </div>
   )
