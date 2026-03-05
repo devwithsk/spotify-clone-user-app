@@ -8,7 +8,7 @@ const Home = () => {
 
 
   return (
-    <div className='w-full h-[87%] flex flex-col overflow-y-scroll scroll-smooth pb-10'>
+    <div className='w-full h-[87%] flex flex-col overflow-y-scroll scroll-smooth'>
 
 
         {/* Trending songs start here */}
