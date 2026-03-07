@@ -48,7 +48,7 @@ const Slides = ({title, data, type}) => {
 
 
   return (
-            <div className='relative w-full h-80 mt-8 group'>
+            <div className='relative w-full h-80 mb-10 group'>
                 <div className='flex justify-between items-center'>
                     <h2 className='px-8 font-bold text-(--var-light) text-xl hover:underline cursor-pointer'>{title}</h2>
                     <a href="#" className='text-sm font-semibold text-(--var-gray3) hover:underline mr-8'>Show all</a>
@@ -56,7 +56,7 @@ const Slides = ({title, data, type}) => {
                 <div 
                 ref={songsRef}
                 onScroll={handleSongsScroll}
-                className='w-full flex gap-4 overflow-x-scroll scroll-smooth p-4'>
+                className='w-full h-full flex gap-4 overflow-x-scroll scroll-smooth p-4'>
     
                     {/* Songs load here */}
     
@@ -71,10 +71,10 @@ const Slides = ({title, data, type}) => {
                                     </div>
                                     <div className='w-[85%] h-[30%] mt-2 ml-4'>
                                         <h3 className='font-bold text-(--var-light) hover:underline'>{song.name}</h3>
-                                        <p className='text-(--var-light) text-md hover:underline'>{song.desc.slice(0, 30)}...</p>
+                                        <p className='text-(--var-light) text-sm hover:underline'>{song.desc.slice(0, 30)}...</p>
                                     </div>
 
-                                    <div onClick={() => handleBtn(index)} className='abosulte w-12 h-12 -translate-y-32 translate-x-12 flex justify-center items-center bg-green-500 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:-translate-y-35 transition-all duration-300 ease-in-out
+                                    <div onClick={() => handleBtn(index)} className='absolute w-10 h-10 translate-y-5 translate-x-12 flex justify-center items-center bg-green-500 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:translate-y-2 transition-all duration-300 ease-in-out
                       hover:scale-105 active:scale-95'>
                                         <FaPlay />
                                     </div>
