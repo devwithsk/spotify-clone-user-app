@@ -3,15 +3,24 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
 import { SongContext } from '../Context/SongContext';
+import { FaPause } from "react-icons/fa6";
+import {useNavigate} from "react-router-dom"
+
 
 
 const Slides = ({title, data, type}) => {
 
         const songsRef = useRef(null)
-        const {playSongById} = useContext(SongContext);
+        const {playSongById, pause} = useContext(SongContext);
     
         const [showLeftArrow, setShowLeftArrow] = useState(false);
         const [showRightArrow, setShowRightArrow] = useState(true);
+
+        const [isClick, setisClick] = useState(false)
+
+        const navigate = useNavigate();
+
+        
     
     
         const handleSongsScroll = () => {
@@ -40,10 +49,20 @@ const Slides = ({title, data, type}) => {
         };
 
 
-        const handleBtn = (id) => {
+        const handlePlay = (id) => {
             if(type === "songs"){
                 playSongById(id)
+                setisClick(true)
             }
+            
+            if (type === "album") {
+                navigate(`/album/${id}`)
+            }
+        }
+
+        const handlePause = () => {
+            setisClick(false)
+            pause()
         }
 
 
@@ -74,9 +93,14 @@ const Slides = ({title, data, type}) => {
                                         <p className='text-(--var-light) text-sm hover:underline'>{song.desc.slice(0, 30)}...</p>
                                     </div>
 
-                                    <div onClick={() => handleBtn(index)} className='absolute w-10 h-10 translate-y-5 translate-x-12 flex justify-center items-center bg-green-500 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:translate-y-2 transition-all duration-300 ease-in-out
+                                    <div className='absolute w-10 h-10 translate-y-5 translate-x-12 flex justify-center items-center bg-green-500 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:translate-y-2 transition-all duration-300 ease-in-out
                       hover:scale-105 active:scale-95'>
-                                        <FaPlay />
+                                        {isClick
+                                        ? (<FaPause className='text-xl' onClick={() => handlePause()} />)
+                                        : (<FaPlay onClick={() => handlePlay(index)} />)
+                                         }
+
+                                        
                                     </div>
 
                                 </div>
